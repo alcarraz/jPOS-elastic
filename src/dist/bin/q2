@@ -6,5 +6,11 @@ exec java -server \
     -Xmx1G \
     -Djava.net.preferIPv4Stack=true \
     -Dcom.sun.management.jmxremote \
+    -Dcom.sun.management.jmxremote.port=59000 \
+    -Dcom.sun.management.jmxremote.local.only=false \
+    -Dcom.sun.management.jmxremote.authenticate=false \
+    -Dcom.sun.management.jmxremote.ssl=false \
+    -Djava.rmi.server.hostname=127.0.0.1 \
+    -javaagent:lib/jolokia-jvm-1.5.0-agent.jar=port=59010,host=0.0.0.0 \
     -jar @jarname@ "$@"
 

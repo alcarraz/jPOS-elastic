@@ -24,6 +24,7 @@ dependencies {
         exclude(module: 'junit')
         exclude(module: 'hamcrest-core')
     }
+    compile 'org.jolokia:jolokia-jvm:1.5.0:agent'
     testCompile 'junit:junit:4.8.2'
 }
 
